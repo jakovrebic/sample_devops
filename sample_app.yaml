@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: sample-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    chart: nodeapp
+    repoURL: https://github.com/jakovrebic/sample_devops
+    targetRevision: main
+    path: node-docker/chart
+    helm:
+      releaseName: sample-app
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: default
+

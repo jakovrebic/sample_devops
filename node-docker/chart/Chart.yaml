@@ -1,0 +1,9 @@
+apiVersion: v1
+description: Helm Chart for sample Node app
+name: nodeapp
+version: 1.0.0
+#TODO put database as dependency
+#dependecies:
+  #- name: postgres
+  #  version: "some"
+  #  repository: "some other"
